@@ -11,7 +11,7 @@ app = Flask(__name__)
 cur = redis.Redis(host='127.0.0.1', port='6379', db=0, password='')
 
 
-@app.route('/write', methods=['POST'])
+@app.route('/write', methods=['POST'])   # End point
 def write():
     # First convert string into json
     name = request.get_json()['name']
